@@ -5,7 +5,7 @@
 - Did ECG2-ECG1
 - mne-python has good amount of features in in-built visualisation
 
-# Neurolit2 based analysis and viz
+# Neurokit2 based analysis and viz
 Raw ECG trace looked like this with baseline correction
 ![Raw trace](https://github.com/rahulvenugopal/HRV_adventures/blob/main/results/After_baseline_correction.jpg)
 ---
