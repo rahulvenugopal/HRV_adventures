@@ -18,7 +18,7 @@ General visualisations
 ![Overall viz](https://github.com/rahulvenugopal/HRV_adventures/blob/main/results/Summary_HRV.jpeg)
 ---
 
-Documentation of features from functions [page](https://github.com/neuropsychology/NeuroKit/tree/master/neurokit2/hrv)
+### Documentation of features from functions [page](https://github.com/neuropsychology/NeuroKit/tree/master/neurokit2/hrv)
 - Frequency domain
 `ulf=(0, 0.0033)`
 `vlf=(0.0033, 0.04)`
@@ -28,7 +28,7 @@ Documentation of features from functions [page](https://github.com/neuropsycholo
 - For instance, 1, 2 and 5 minutes of high quality signal are the recomended minima for HF, LF and LF/HF, respectively
 ---
 
-- **Characteristics of the Poincaré Plot Geometry**:
+## **Characteristics of the Poincaré Plot Geometry**:
 - **SD1**: SD1 is a measure of the spread of RR intervals on the Poincaré plot perpendicular to the line of identity.
 It is an index of short-term RR interval fluctuations, i.e., beat-to-beat variability.
 It is equivalent (although on another scale) to RMSSD, and therefore it is redundant to report correlations with both (Ciccone, 2017).
@@ -90,7 +90,7 @@ calculated by `fractal_dfa()`. DimRange is the range of singularity dimensions, 
 - **DFA_alpha2_DimMean**: Multifractal DFA. Dimmean is the mean of singularity dimensions.
 ---
 
-References
+**References:**
 - Yan, C., Li, P., Ji, L., Yao, L., Karmakar, C., & Liu, C. (2017). Area asymmetry of heart
     rate variability signal. Biomedical engineering online, 16(1), 112.
 - Ciccone, A. B., Siedlik, J. A., Wecht, J. M., Deckert, J. A., Nguyen, N. D., & Weir, J. P.
@@ -117,7 +117,7 @@ References
     correlation dimension and detrended fluctuation analysis. Itbm-Rbm, 23(6), 333-339.
 ---
 
-**Time domain HRV metrics:**
+## **Time domain HRV metrics:**
 - **MeanNN**: The mean of the RR intervals.
 - **SDNN**: The standard deviation of the RR intervals.
 -**SDANN1**, **SDANN2**, **SDANN5**: The standard deviation of average RR intervals extracted from n-minute segments of
