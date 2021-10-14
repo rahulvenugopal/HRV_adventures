@@ -28,7 +28,6 @@ Documentation of features from functions [page](https://github.com/neuropsycholo
 - For instance, 1, 2 and 5 minutes of high quality signal are the recomended minima for HF, LF and LF/HF, respectively
 ---
 
-
 - **Characteristics of the Poincaré Plot Geometry**:
 - **SD1**: SD1 is a measure of the spread of RR intervals on the Poincaré plot perpendicular to the line of identity.
 It is an index of short-term RR interval fluctuations, i.e., beat-to-beat variability.
@@ -89,4 +88,63 @@ calculated by `fractal_dfa()`. DimRange is the range of singularity dimensions, 
 calculated by `fractal_dfa()`. DimRange is the range of singularity dimensions, correspoinding to the height of the singularity spectrum.
 - **DFA_alpha1_DimMean**: Multifractal DFA. Dimmean is the mean of singularity dimensions.
 - **DFA_alpha2_DimMean**: Multifractal DFA. Dimmean is the mean of singularity dimensions.
+---
+
+References
+- Yan, C., Li, P., Ji, L., Yao, L., Karmakar, C., & Liu, C. (2017). Area asymmetry of heart
+    rate variability signal. Biomedical engineering online, 16(1), 112.
+- Ciccone, A. B., Siedlik, J. A., Wecht, J. M., Deckert, J. A., Nguyen, N. D., & Weir, J. P.
+    (2017). Reminder: RMSSD and SD1 are identical heart rate variability metrics. Muscle & nerve,
+    56(4), 674-678.
+- Shaffer, F., & Ginsberg, J. P. (2017). An overview of heart rate variability metrics and norms.
+    Frontiers in public health, 5, 258.
+- Costa, M. D., Davis, R. B., & Goldberger, A. L. (2017). Heart rate fragmentation: a new
+    approach to the analysis of cardiac interbeat interval dynamics. Front. Physiol. 8, 255 (2017).
+- Jeppesen, J., Beniczky, S., Johansen, P., Sidenius, P., & Fuglsang-Frederiksen, A. (2014).
+    Using Lorenz plot and Cardiac Sympathetic Index of heart rate variability for detecting seizures
+    for patients with epilepsy. In 2014 36th Annual International Conference of the IEEE Engineering
+    in Medicine and Biology Society (pp. 4563-4566). IEEE.
+- Piskorski, J., & Guzik, P. (2011). Asymmetric properties of long-term and total heart rate
+    variability. Medical & biological engineering & computing, 49(11), 1289-1297.
+    - Stein, P. K. (2002). Assessing heart rate variability from real-world Holter reports. Cardiac
+    electrophysiology review, 6(3), 239-244.
+- Brennan, M. et al. (2001). Do Existing Measures of Poincaré Plot Geometry Reflect Nonlinear
+    Features of Heart Rate Variability?. IEEE Transactions on Biomedical Engineering, 48(11), 1342-1347.
+- Toichi, M., Sugiura, T., Murai, T., & Sengoku, A. (1997). A new method of assessing cardiac
+    autonomic function and its comparison with spectral analysis and coefficient of variation of R–R
+    interval. Journal of the autonomic nervous system, 62(1-2), 79-84.
+- Acharya, R. U., Lim, C. M., & Joseph, P. (2002). Heart rate variability analysis using
+    correlation dimension and detrended fluctuation analysis. Itbm-Rbm, 23(6), 333-339.
+---
+
+**Time domain HRV metrics:**
+        - **MeanNN**: The mean of the RR intervals.
+        - **SDNN**: The standard deviation of the RR intervals.
+        -**SDANN1**, **SDANN2**, **SDANN5**: The standard deviation of average RR intervals extracted from n-minute segments of
+        time series data (1, 2 and 5 by default). Note that these indices require a minimal duration of signal to be computed
+        (3, 6 and 15 minutes respectively) and will be silently skipped if the data provided is too short.
+        -**SDNNI1**, **SDNNI2**, **SDNNI5**: The mean of the standard deviations of RR intervals extracted from n-minute
+        segments of time series data (1, 2 and 5 by default). Note that these indices require a minimal duration of signal to
+        be computed (3, 6 and 15 minutes respectively) and will be silently skipped if the data provided is too short.
+        - **RMSSD**: The square root of the mean of the sum of successive differences between
+        adjacent RR intervals. It is equivalent (although on another scale) to SD1, and
+        therefore it is redundant to report correlations with both (Ciccone, 2017).
+        - **SDSD**: The standard deviation of the successive differences between RR intervals.
+        - **CVNN**: The standard deviation of the RR intervals (SDNN) divided by the mean of the RR
+        intervals (MeanNN).
+        - **CVSD**: The root mean square of the sum of successive differences (RMSSD) divided by the
+        mean of the RR intervals (MeanNN).
+        - **MedianNN**: The median of the absolute values of the successive differences between RR intervals.
+        - **MadNN**: The median absolute deviation of the RR intervals.
+        - **HCVNN**: The median absolute deviation of the RR intervals (MadNN) divided by the median
+        of the absolute differences of their successive differences (MedianNN).
+        - **IQRNN**: The interquartile range (IQR) of the RR intervals.
+        - **pNN50**: The proportion of RR intervals greater than 50ms, out of the total number of RR intervals.
+        - **pNN20**: The proportion of RR intervals greater than 20ms, out of the total number of RR intervals.
+        - **TINN**: A geometrical parameter of the HRV, or more specifically, the baseline width of
+        the RR intervals distribution obtained by triangular interpolation, where the error of least
+        squares determines the triangle. It is an approximation of the RR interval distribution.
+        - **HTI**: The HRV triangular index, measuring the total number of RR intervals divded by the
+        height of the RR intervals histogram.	
+
 
