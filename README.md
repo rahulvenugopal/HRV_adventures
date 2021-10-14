@@ -61,7 +61,8 @@ accelerations (shortenings of RR intervals), respectively (Piskorski,  2011).
 - **IALS**: Inverse of the average length of the acceleration/deceleration segments.
 - **PSS**: Percentage of short segments.
 - **PAS**: IPercentage of NN intervals in alternation segments.
-- **Indices of Complexity**:
+
+# **Indices of Complexity:**
 - **ApEn**: The approximate entropy measure of HRV, calculated by `entropy_approximate()`.
 - **SampEn**: The sample entropy measure of HRV, calculated by `entropy_sample()`.
 - **ShanEn**: The Shannon entropy measure of HRV, calculated by `entropy_shannon()`.
@@ -120,10 +121,10 @@ calculated by `fractal_dfa()`. DimRange is the range of singularity dimensions, 
 # **Time domain HRV metrics:**
 - **MeanNN**: The mean of the RR intervals.
 - **SDNN**: The standard deviation of the RR intervals.
--**SDANN1**, **SDANN2**, **SDANN5**: The standard deviation of average RR intervals extracted from n-minute segments of
+- **SDANN1**, **SDANN2**, **SDANN5**: The standard deviation of average RR intervals extracted from n-minute segments of
         time series data (1, 2 and 5 by default). Note that these indices require a minimal duration of signal to be computed
         (3, 6 and 15 minutes respectively) and will be silently skipped if the data provided is too short.
--**SDNNI1**, **SDNNI2**, **SDNNI5**: The mean of the standard deviations of RR intervals extracted from n-minute
+- **SDNNI1**, **SDNNI2**, **SDNNI5**: The mean of the standard deviations of RR intervals extracted from n-minute
         segments of time series data (1, 2 and 5 by default). Note that these indices require a minimal duration of signal to
         be computed (3, 6 and 15 minutes respectively) and will be silently skipped if the data provided is too short.
 - **RMSSD**: The square root of the mean of the sum of successive differences between
