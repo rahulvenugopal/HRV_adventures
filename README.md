@@ -1,8 +1,8 @@
 # HRV analysis
 - Data was acquired using brain products actiChanp plus
 - EEG electrodes (11 and 22) were used for ECG data collection in lead I config
-- ECG1 going to 11 (left) and ECG2 to 22 (right) (Cross check once)
-- Did ECG2-ECG1
+- ECG1 going to 11 (left) and ECG2 to 22 (right)
+- Did ECG2-ECG1 ( RA-LA as per Lead I system)
 - mne-python has good amount of features in in-built visualisation
 
 # Neurokit2 based analysis and viz
@@ -156,3 +156,5 @@ calculated by `fractal_dfa()`. DimRange is the range of singularity dimensions, 
     electrophysiology review, 6(3), 239-244.
 - Shaffer, F., & Ginsberg, J. P. (2017). An overview of heart rate variability metrics and norms.
     Frontiers in public health, 5, 258.
+
+# Create a cookbook for HRV analysis + Video tutorial **(future idea/hobby project/ intern project)**
