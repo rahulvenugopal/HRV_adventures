@@ -80,15 +80,15 @@ peaks['ECG_R_Peaks'].value_counts()
 
 # time-domain analysis
 # Extract clean EDA and SCR features
-hrv_time = nk.hrv_time(peaks, sampling_rate=1000, show=True)
+hrv_time = nk.hrv_time(info, sampling_rate=1000, show=True)
 hrv_time
 
 # frequency domain analysis
-hrv_freq = nk.hrv_frequency(peaks, sampling_rate=100, show=True)
+hrv_freq = nk.hrv_frequency(info, sampling_rate=100, show=True)
 hrv_freq
 
 # non-linear analysis
-hrv_non = nk.hrv_nonlinear(peaks, sampling_rate=100, show=True)
+hrv_non = nk.hrv_nonlinear(info, sampling_rate=100, show=True)
 hrv_non
 
 # All parameters
