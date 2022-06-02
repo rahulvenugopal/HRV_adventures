@@ -28,6 +28,7 @@ from tkinter import filedialog
 from glob import glob
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
 import neurokit2 as nk
 import pandas as pd
@@ -78,27 +79,30 @@ peaks, info = nk.ecg_peaks(ecg_df["ECG"], sampling_rate=1000)
 # count the number of heart beats (same info in info)
 peaks['ECG_R_Peaks'].value_counts()
 
+RR_intervals_locations = list(info.values())[0]
+
 # time-domain analysis
 # Extract clean EDA and SCR features
 hrv_time = nk.hrv_time(info, sampling_rate=1000, show=True)
 hrv_time
 
 # frequency domain analysis
-hrv_freq = nk.hrv_frequency(info, sampling_rate=100, show=True)
+hrv_freq = nk.hrv_frequency(info, sampling_rate=1000, show=True)
 hrv_freq
 
 # non-linear analysis
-hrv_non = nk.hrv_nonlinear(info, sampling_rate=100, show=True)
+hrv_non = nk.hrv_nonlinear(info, sampling_rate=1000, show=True)
 hrv_non
 
 # All parameters
-hrv_indices = nk.hrv(peaks, sampling_rate=100, show=True)
+hrv_indices = nk.hrv(peaks, sampling_rate=1000, show=True)
 hrv_indices
 
 #%% Visualise HRV and extract features
 # Process ecg
 ecg_signals, info = nk.ecg_process(ecg_df["ECG"], sampling_rate=1000)
 
+# Visual quality checks
 plot = nk.ecg_plot(ecg_signals[:30000], sampling_rate=1000)
 
 # extract features
