@@ -26,12 +26,10 @@ import numpy as np
 import mne
 from tkinter import filedialog
 from glob import glob
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
 import neurokit2 as nk
-import pandas as pd
 plt.rcParams['figure.figsize'] = [15, 9]  # Bigger images
 plt.rcParams['font.size']= 13
 
@@ -103,7 +101,7 @@ hrv_indices
 ecg_signals, info = nk.ecg_process(ecg_df["ECG"], sampling_rate=1000)
 
 # Visual quality checks
-plot = nk.ecg_plot(ecg_signals[:30000], sampling_rate=1000)
+plot = nk.ecg_plot(ecg_signals[:30000])
 
 # extract features
 all_params_hrv = nk.ecg_intervalrelated(ecg_signals)
