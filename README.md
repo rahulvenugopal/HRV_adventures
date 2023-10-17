@@ -11,11 +11,11 @@ Raw ECG trace looked like this with baseline correction
 ---
 
 Time domain, Frequency domain and Non-linear methods
-![Parameters](https://github.com/rahulvenugopal/HRV_adventures/blob/main/results/All_parameters_HRV.jpeg)
+![Parameters](https://github.com/rahulvenugopal/HRV_adventures/blob/main/results/All_parameters_HRV.png)
 ---
 
 General visualisations
-![Overall viz](https://github.com/rahulvenugopal/HRV_adventures/blob/main/results/Summary_HRV.jpeg)
+![Overall viz](https://github.com/rahulvenugopal/HRV_adventures/blob/main/results/Summary_HRV.png)
 ---
 
 # Documentation of features from functions [page](https://github.com/neuropsychology/NeuroKit/tree/master/neurokit2/hrv)
