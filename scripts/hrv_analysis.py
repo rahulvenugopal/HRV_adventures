@@ -72,7 +72,7 @@ ecg_df.to_csv('ecg_data_sorted.csv',
 
 
 # Find peaks
-peaks, info = nk.ecg_peaks(ecg_df["ECG"], sampling_rate=1000)
+peaks, info = nk.ecg_peaks(ecg_df["ECG"], correct_artifacts = True, sampling_rate=1000)
 
 # count the number of heart beats (same info in info)
 peaks['ECG_R_Peaks'].value_counts()
